@@ -5,10 +5,32 @@
  */
 package com.students.everis.app.entidad;
 
+import javax.persistence.Entity;
+
 /**
  *
  * @author gvalverd
  */
+@Entity
 public class Result {
     
+	private Usuario user;
+	
+	private int puntos;
+
+	public Usuario getUser() {
+		return user;
+	}
+
+	public void setUser(Usuario user) {
+		this.user = user;
+	}
+
+	public int getPuntos() {
+		return puntos;
+	}
+
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
 }

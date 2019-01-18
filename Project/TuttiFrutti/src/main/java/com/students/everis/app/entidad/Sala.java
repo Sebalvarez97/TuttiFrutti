@@ -22,6 +22,8 @@ public class Sala{
     
 	private String name;
 	
+	private Game currentgame;
+	
 	private List<Usuario> jugadores = new ArrayList<Usuario>();
 	
 	@Id
@@ -58,5 +60,13 @@ public class Sala{
 	
 	public void removePlayer(Usuario user) {
 		this.jugadores.remove(user);
+	}
+
+	public Game getCurrentgame() {
+		return currentgame;
+	}
+
+	public void setCurrentgame(Game currentgame) {
+		this.currentgame = currentgame;
 	}
 }
