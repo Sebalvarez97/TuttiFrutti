@@ -5,6 +5,9 @@
  */
 package com.students.everis.app.entidad;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 
 /**
@@ -17,6 +20,8 @@ public class Result {
 	private Usuario user;
 	
 	private int puntos;
+	
+	private List<Respuesta> respuestas = new ArrayList<Respuesta>();
 
 	public Usuario getUser() {
 		return user;
@@ -32,5 +37,13 @@ public class Result {
 
 	public void setPuntos(int puntos) {
 		this.puntos = puntos;
+	}
+
+	public List<Respuesta> getRespuestas() {
+		return respuestas;
+	}
+
+	public void setRespuestas(List<Respuesta> respuestas) {
+		this.respuestas = respuestas;
 	}
 }
