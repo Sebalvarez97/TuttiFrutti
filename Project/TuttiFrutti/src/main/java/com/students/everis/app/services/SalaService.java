@@ -19,7 +19,7 @@ public class SalaService {
 	
 	public Sala create(String name) {
 		Sala nueva = new Sala();
-		nueva.setName(name);
+		nueva.setName(name); 
 		salas.add(nueva);
 		return nueva;
 	}

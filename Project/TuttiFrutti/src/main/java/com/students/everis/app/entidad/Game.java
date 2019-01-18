@@ -13,8 +13,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.apache.tomcat.jni.Time;
-
 /**
  *
  * @author gvalverd
@@ -26,11 +24,9 @@ public class Game {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private int time;
+	private Long time;
 	
-	private Time start;
-	
-	private Time end;
+	private boolean playing;
 	
 	private List<Ronda> rondas = new ArrayList<Ronda>();
 	
@@ -52,22 +48,6 @@ public class Game {
 
 	public void setJugadores(List<Usuario> jugadores) {
 		this.jugadores = jugadores;
-	}
-
-	public Time getStart() {
-		return start;
-	}
-
-	public void setStart(Time start) {
-		this.start = start;
-	}
-
-	public Time getEnd() {
-		return end;
-	}
-
-	public void setEnd(Time end) {
-		this.end = end;
 	}
 	
 	public void addPlayer(Usuario user) {
@@ -94,19 +74,19 @@ public class Game {
 		this.categorias.remove(categoria);
 	}
 
-	public int getTime() {
-		return time;
-	}
-
-	public void setTime(int time) {
-		this.time = time;
-	}
-
 	public List<Categoria> getCategorias() {
 		return categorias;
 	}
 
 	public void setCategorias(List<Categoria> categorias) {
 		this.categorias = categorias;
+	}
+
+	public boolean isPlaying() {
+		return playing;
+	}
+
+	public void setPlaying(boolean playing) {
+		this.playing = playing;
 	}
 }
